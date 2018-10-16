@@ -12,13 +12,18 @@ int main() {
 		for(i = 0; i < length; i++) {
 			if(arr[i] == ' ') {
 				for(j = i-1; j >= 0; j--) {
-					printf("%c", arr[j]);
+					if(arr[j] == ' ') break;
+					printf("%c", arr[j]); 
 				}
 				printf(" ");
-			} else if() {
-				
-			} 
+			} else if(arr[i+1] == '\0') {
+				for(j = i; j >= 0; j--) {
+					if(arr[j] == ' ') break;
+					printf("%c", arr[j]); 
+				}
+			}
 		}
+		printf("\n");
 	}
 	return 0;
 }
